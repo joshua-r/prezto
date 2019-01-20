@@ -9,6 +9,7 @@
 # Browser
 #
 
+export BROWSER='firefox'
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
@@ -17,8 +18,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export VISUAL='nvim'
+export EDITOR="$VISUAL"
 export PAGER='less'
 
 #
