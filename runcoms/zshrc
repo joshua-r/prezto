@@ -16,5 +16,9 @@ alias pac=pikaur
 source /usr/share/zsh/site-functions/_gibo
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-  exec sway
+  dbus-update-activation-environment --systemd DISPLAY
+  eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+  export SSH_AUTH_SOCK
+
+  exec startx
 fi
