@@ -9,7 +9,7 @@
 # Browser
 #
 
-export BROWSER='firefox'
+export BROWSER='chromium'
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
