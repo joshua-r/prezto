@@ -13,7 +13,6 @@ fi
 alias pac=pikaur
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source /usr/share/zsh/site-functions/_gibo
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   dbus-update-activation-environment --systemd DISPLAY
